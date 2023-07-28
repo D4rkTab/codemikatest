@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/first-api")
 public class UserController {
 //    Routes:
 //    Get: /api/user @RequestParam Long id => User,
