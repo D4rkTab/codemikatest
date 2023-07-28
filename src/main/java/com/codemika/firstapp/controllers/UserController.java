@@ -26,17 +26,17 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/user")
-    public User getOne(Long id){
-        return userService.getOne(id);
+    @GetMapping("/user/{userId}")
+    public User getOne(@PathVariable Long userId){
+        return userService.getOne(userId);
     }
     @GetMapping("/users")
     public List<User> getAll(){
         return userService.getAll();
     }
-    @PutMapping("/user")
-    public User update(@RequestParam Long id, @RequestParam String name, @RequestParam String surname, @RequestParam String patronymic){
-        return userService.update(id, name, surname, patronymic);
+    @PutMapping("/user/{userId}")
+    public User update(@PathVariable Long userId, @RequestBody User user){
+        return userService.update(userId, user);
     }
 
     @PostMapping("/user")

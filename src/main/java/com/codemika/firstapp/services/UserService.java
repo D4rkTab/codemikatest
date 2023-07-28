@@ -32,15 +32,18 @@ public class UserService {
         return userRepo.save(user);
     }
 
-    public User update(Long id, String name, String surname, String patronymic){
+    public User update(Long id, User user){
         return userRepo.findById(id)
                 .map(_user -> {
-                    _user.setName(name);
-                    _user.setPatronymic(surname);
-                    _user.setSurname(patronymic);
+                    _user.setName(user.getName());
+                    _user.setPatronymic(user.getPatronymic());
+                    _user.setSurname(user.getSurname());
                     return userRepo.save(_user);
                 })
-                .orElseThrow(() -> new UserNotFoundException(id));
+                .orElseGet(() -> {
+                    user.setId(id);
+                    return userRepo.save(user);
+                });
     }
 
     public void delete(Long id){
