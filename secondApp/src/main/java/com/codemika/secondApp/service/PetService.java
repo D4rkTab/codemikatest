@@ -1,9 +1,9 @@
-package com.codemika.secondapp.service;
+package com.codemika.secondApp.service;
 
-import com.codemika.secondapp.exceptions.PetNotFoundException;
-import com.codemika.secondapp.models.Pet;
+import com.codemika.secondApp.exceptions.PetNotFoundException;
+import com.codemika.secondApp.models.Pet;
 import org.springframework.stereotype.Service;
-import com.codemika.secondapp.repo.PetRepo;
+import com.codemika.secondApp.repo.PetRepo;
 @Service
 public class PetService {
     private PetRepo petRepo;

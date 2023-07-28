@@ -1,7 +1,7 @@
-package com.codemika.secondapp.controllers;
+package com.codemika.secondApp.controllers;
 
-import com.codemika.secondapp.models.Pet;
-import com.codemika.secondapp.service.PetService;
+import com.codemika.secondApp.models.Pet;
+import com.codemika.secondApp.service.PetService;
 import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

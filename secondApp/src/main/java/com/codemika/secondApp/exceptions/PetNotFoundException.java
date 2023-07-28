@@ -1,4 +1,4 @@
-package com.codemika.secondapp.exceptions;
+package com.codemika.secondApp.exceptions;
 
 public class PetNotFoundException extends RuntimeException{
     public PetNotFoundException(Long id) {

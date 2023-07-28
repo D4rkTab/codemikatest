@@ -1,4 +1,4 @@
-package com.codemika.secondapp.models;
+package com.codemika.secondApp.models;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.OnDelete;
